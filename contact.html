@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Contact BudgetBasics and share feedback about the lessons, budgeting tools, design and usability." name="description"/>
+<title>Contact | BudgetBasics</title>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<nav class="navbar container">
+<a class="logo" href="index.html">Budget<span>Basics</span></a>
+<button aria-label="Open menu" class="menu-btn" id="menuBtn">☰</button>
+<div class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a href="learn.html">Learn</a>
+<a href="planner.html">Expense Planner</a>
+<a href="goals.html">Savings Goals</a>
+<a href="about.html">About Us</a>
+<a aria-current="page" class="active" href="contact.html">Contact</a>
+<a href="sitemap.html">Sitemap</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="page-banner">
+<div class="container">
+<span class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</span>
+<h1>Have some feedback?</h1>
+<p>Tell us what you think about BudgetBasics.</p>
+</div>
+</section>
+<section class="section container">
+<div class="contact-intro">
+<div class="contact-intro-content">
+<span class="eyebrow">LET'S CONNECT</span>
+<h2>Your feedback matters.</h2>
+<p>Found something useful? Have an idea for improving the website? Send us a message and share your thoughts.</p>
+</div>
+<div class="contact-intro-image">
+<img alt="Students sharing ideas and feedback" src="images/contact.jpg"/>
+</div>
+</div>
+<div class="calculator-layout">
+<div>
+<div class="example-box">
+<h3>What can you tell us?</h3>
+<p>Share your thoughts about the lessons, tools, design or usability.</p>
+</div>
+<div class="example-box">
+<h3>Contact Information</h3>
+<p><strong>Email:</strong> <a href="mailto:rustamaptech056@gmail.com">rustamaptech056@gmail.com</a></p>
+<p><strong>Phone:</strong> <a href="tel:03442005422">03442005422</a></p>
+<p><strong>Instagram:</strong> <a href="https://www.instagram.com/rustam_ch_56" rel="noopener" target="_blank">@rustam_ch_56</a></p>
+<p><strong>TikTok:</strong> <a href="https://www.tiktok.com/@notsyour003" rel="noopener" target="_blank">@notsyour003</a></p>
+</div>
+</div>
+<div class="form-card">
+<h2>Send Feedback</h2>
+<form id="contactForm">
+<label for="contactName">Name</label>
+<input id="contactName" placeholder="Your name" required="" type="text"/>
+<label for="contactEmail">Email</label>
+<input id="contactEmail" placeholder="you@example.com" required="" type="email"/>
+<label for="contactSubject">Subject</label>
+<input id="contactSubject" placeholder="What is your feedback about?" required="" type="text"/>
+<label for="contactRating">Rating</label>
+<select id="contactRating" required="">
+<option value="">Select a rating</option>
+<option value="5">5 - Excellent</option>
+<option value="4">4 - Very Good</option>
+<option value="3">3 - Good</option>
+<option value="2">2 - Needs Improvement</option>
+<option value="1">1 - Poor</option>
+</select>
+<label for="contactMessage">Message</label>
+<textarea id="contactMessage" placeholder="Write your message..." required="" rows="6"></textarea>
+<p class="error" id="contactError"></p>
+<button class="btn btn-primary full-btn" type="submit">Send Feedback</button>
+</form>
+<div class="example-box hidden" id="contactSuccess">
+<h3>Thank you!</h3>
+<p>Thank you for your feedback. Your response has been received successfully.</p>
+</div>
+<p class="small-note">This feedback form is for demonstration purposes. No information is stored or transmitted.</p>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-content">
+<div>
+<a class="logo" href="index.html">Budget<span>Basics</span></a>
+<p>Helping students make smarter money decisions.</p>
+</div>
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="learn.html">Learn</a>
+<a href="planner.html">Planner</a>
+<a href="goals.html">Goals</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="sitemap.html">Sitemap</a>
+</div>
+<div class="footer-info">
+<p id="dateTime"></p>
+<p>Visits on this browser: <span id="visitorCount">0</span></p>
+</div>
+</div>
+<p class="copyright">© 2026 BudgetBasics. Educational purposes only.</p>
+</footer>
+<button aria-label="Back to top" class="back-to-top" id="backToTop">↑</button>
+<script src="js/script.js"></script>
+</body>
+</html>

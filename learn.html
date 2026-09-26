@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Learn budgeting, saving, needs versus wants and money management with BudgetBasics." name="description"/>
+<title>Learn | BudgetBasics</title>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<nav class="navbar container">
+<a class="logo" href="index.html">Budget<span>Basics</span></a>
+<button aria-label="Open menu" class="menu-btn" id="menuBtn">☰</button>
+<div class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a aria-current="page" class="active" href="learn.html">Learn</a>
+<a href="planner.html">Expense Planner</a>
+<a href="goals.html">Savings Goals</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="sitemap.html">Sitemap</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="page-banner">
+<div class="container">
+<span class="eyebrow">YOUR LEARNING SPACE</span>
+<h1>Money made simple.</h1>
+<p>Short lessons, real-life examples and interactive activities.</p>
+</div>
+</section>
+<section class="section container" id="budgeting">
+<div class="section-heading">
+<span class="eyebrow">LESSON 01</span>
+<h2>Budgeting Basics</h2>
+<p>A budget is a plan for how you will use your money.</p>
+</div>
+<div class="learning-intro-image">
+<img alt="Student learning about budgeting and money management" src="images/budgeting-student.jpg"/>
+<div>
+<h3>Learn how to make smarter money decisions</h3>
+<p>Understand income, expenses and savings through simple examples designed for everyday student life.</p>
+</div>
+</div>
+<input aria-label="Search learning content" id="lessonSearch" placeholder="Search lessons, tips or examples..." type="search"/>
+<div class="sort-box">
+<label for="lessonSort">Sort lessons:</label>
+<select id="lessonSort">
+<option value="default">Default</option>
+<option value="az">A → Z</option>
+<option value="za">Z → A</option>
+</select>
+</div>
+<div class="card-grid learning-grid">
+<div class="feature-card learning-item" data-topic="income">
+<div class="feature-icon">↗</div>
+<h3>Income</h3>
+<p>Money you receive, such as an allowance, scholarship or part-time earnings.</p>
+</div>
+<div class="feature-card learning-item" data-topic="fixed expenses">
+<div class="feature-icon">▣</div>
+<h3>Fixed Expenses</h3>
+<p>Regular costs that stay mostly the same, such as monthly transport passes.</p>
+</div>
+<div class="feature-card learning-item" data-topic="variable expenses">
+<div class="feature-icon">↝</div>
+<h3>Variable Expenses</h3>
+<p>Costs that change, such as eating out, shopping and entertainment.</p>
+</div>
+<div class="feature-card learning-item" data-topic="needs">
+<div class="feature-icon">⌂</div>
+<h3>Needs</h3>
+<p>Essential things such as food, education and necessary transport.</p>
+</div>
+<div class="feature-card learning-item" data-topic="wants">
+<div class="feature-icon">☆</div>
+<h3>Wants</h3>
+<p>Optional purchases that can make life enjoyable but are not essential.</p>
+</div>
+<div class="feature-card learning-item" data-topic="savings">
+<div class="feature-icon">◈</div>
+<h3>Savings</h3>
+<p>Money set aside for future goals or unexpected needs.</p>
+</div>
+</div>
+<p class="empty-message hidden" id="noLessons">No matching lessons found.</p>
+<div class="example-box">
+<h3>Example: A student's monthly budget</h3>
+<p>Suppose a student receives Rs. 20,000 per month.</p>
+<div class="result-line"><span>Needs</span><strong>Rs. 10,000</strong></div>
+<div class="result-line"><span>Wants</span><strong>Rs. 6,000</strong></div>
+<div class="result-line"><span>Savings</span><strong>Rs. 4,000</strong></div>
+<p class="small-note">These are sample values, not a required spending plan.</p>
+</div>
+<div class="quiz-box">
+<h3>Quick knowledge check</h3>
+<p>Which of these is an example of a fixed expense?</p>
+<button class="answer-btn" data-correct="false">Buying snacks</button>
+<button class="answer-btn" data-correct="true">Monthly bus pass</button>
+<button class="answer-btn" data-correct="false">Weekend shopping</button>
+<p aria-live="polite" id="quizFeedback"></p>
+</div>
+</section>
+<section class="section soft-section" id="needs-wants">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">LESSON 02</span>
+<h2>Need or want?</h2>
+<p>Choose the right category for each example.</p>
+</div>
+<div class="quiz-box">
+<h3 id="itemQuestion">Buying a textbook required for class</h3>
+<div class="quiz-actions">
+<button class="btn btn-primary" onclick="checkNeed('need')">Need</button>
+<button class="btn btn-outline" onclick="checkNeed('want')">Want</button>
+</div>
+<p aria-live="polite" id="needFeedback"></p>
+<button class="text-btn" onclick="nextQuestion()">Next example →</button>
+</div>
+<div class="example-box">
+<h3>Before buying something, ask yourself:</h3>
+<p>Do I really need it? Can I afford it? Can this purchase wait? Is there a cheaper alternative?</p>
+</div>
+</div>
+</section>
+<section class="section container" id="mistakes">
+<div class="section-heading">
+<span class="eyebrow">LESSON 03</span>
+<h2>Common money mistakes</h2>
+<p>Click each topic to learn how to avoid it.</p>
+</div>
+<div class="mistakes-feature">
+<img alt="Money management and healthy financial habits" src="images/money-habits.jpg"/>
+<div>
+<h3>Build better money habits</h3>
+<p>Small decisions can make a difference over time. Learn to recognize common spending mistakes and build more thoughtful money habits.</p>
+</div>
+</div>
+<div class="accordion">
+<details>
+<summary>Impulse buying</summary>
+<p>You see a discounted pair of shoes and buy them without checking your budget. Try waiting 24 hours before making an optional purchase.</p>
+</details>
+<details>
+<summary>Ignoring small expenses</summary>
+<p>Buying snacks every day may seem inexpensive, but the monthly total can surprise you. Track even small purchases.</p>
+</details>
+<details>
+<summary>Late payments</summary>
+<p>Forgetting a bill can lead to extra charges. Keep a reminder for important payment dates.</p>
+</details>
+<details>
+<summary>Unused subscriptions</summary>
+<p>Paying for services you rarely use wastes money. Review your subscriptions regularly.</p>
+</details>
+<details>
+<summary>Spending without a plan</summary>
+<p>Using money without setting priorities can leave little for important needs. Create a simple monthly budget first.</p>
+</details>
+</div>
+</section>
+<section class="section soft-section" id="gallery">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">VISUAL LEARNING</span>
+<h2>Money lessons at a glance</h2>
+</div>
+<div class="filter-buttons">
+<button class="filter-btn selected" data-filter="all">All</button>
+<button class="filter-btn" data-filter="budget">Budgeting</button>
+<button class="filter-btn" data-filter="saving">Saving</button>
+</div>
+<div class="card-grid" id="galleryItems">
+<div class="gallery-card" data-category="budget">
+<img alt="Student budgeting and planning money" class="gallery-image" src="images/hero-budget.jpg"/>
+<h3>The budget split</h3>
+<p>A simple way to organize needs, wants and savings.</p>
+</div>
+<div class="gallery-card" data-category="budget">
+<img alt="Student learning budgeting basics" class="gallery-image" src="images/budgeting-student.jpg"/>
+<h3>Choose wisely</h3>
+<p>Learn how to prioritize essential purchases.</p>
+</div>
+<div class="gallery-card" data-category="saving">
+<img alt="Savings goal and money planning" class="gallery-image" src="images/saving-goal.jpg"/>
+<h3>Small saving challenge</h3>
+<p>Practice putting aside a little money regularly.</p>
+</div>
+<p class="empty-message hidden" id="galleryEmpty">No matching items found.</p>
+</div>
+</div></section>
+<section class="section container" id="chatbot">
+<div class="section-heading">
+<span class="eyebrow">ASK BUDGETBASICS</span>
+<h2>Your money learning assistant</h2>
+<p>Ask a simple question about budgeting, needs or savings.</p>
+</div>
+<div class="chat-box">
+<div class="chat-messages" id="chatMessages">
+<div class="bot-message">Hi! What would you like to learn about money today?</div>
+</div>
+<div class="suggested-questions">
+<button onclick="askSuggested('What is a need?')">What is a need?</button>
+<button onclick="askSuggested('How much should I save?')">How much should I save?</button>
+<button onclick="askSuggested('How do I avoid overspending?')">Avoid overspending</button>
+</div>
+<form class="chat-form" id="chatForm">
+<input id="chatInput" placeholder="Type your question..." required="" type="text"/>
+<button class="btn btn-primary" type="submit">Ask</button>
+</form>
+<p class="small-note">This assistant provides basic educational information, not professional financial advice.</p>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-content">
+<div>
+<a class="logo" href="index.html">Budget<span>Basics</span></a>
+<p>Helping students make smarter money decisions.</p>
+</div>
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="learn.html">Learn</a>
+<a href="planner.html">Planner</a>
+<a href="goals.html">Goals</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="sitemap.html">Sitemap</a>
+</div>
+<div class="footer-info">
+<p id="dateTime"></p>
+<p>Visits on this browser: <span id="visitorCount">0</span></p>
+</div>
+</div>
+<p class="copyright">© 2026 BudgetBasics. Educational purposes only.</p>
+</footer>
+<button aria-label="Back to top" class="back-to-top" id="backToTop">↑</button>
+<script src="js/script.js"></script>
+</body>
+</html>

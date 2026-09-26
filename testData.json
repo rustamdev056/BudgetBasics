@@ -1,0 +1,159 @@
+{
+  "project": "BudgetBasics",
+  "testData": [
+    {
+      "testId": "TC-001",
+      "feature": "50-30-20 Calculator",
+      "input": {
+        "income": 100000
+      },
+      "expectedResult": {
+        "needs": 50000,
+        "wants": 30000,
+        "savings": 20000
+      },
+      "status": "Pass"
+    },
+    {
+      "testId": "TC-002",
+      "feature": "Savings Goals",
+      "input": {
+        "goalName": "New Laptop",
+        "targetAmount": 100000,
+        "currentSavings": 20000,
+        "monthlyContribution": 10000
+      },
+      "expectedResult": {
+        "remainingAmount": 80000,
+        "estimatedMonths": 8,
+        "progress": "20%"
+      },
+      "status": "Pass"
+    },
+    {
+      "testId": "TC-003",
+      "feature": "Savings Goals Validation",
+      "input": {
+        "targetAmount": -100000
+      },
+      "expectedResult": "Validation error displayed",
+      "status": "Pass"
+    },
+    {
+      "testId": "TC-004",
+      "feature": "Expense Planner",
+      "input": {
+        "date": "2026-09-25",
+        "category": "Food",
+        "description": "Lunch",
+        "amount": 500
+      },
+      "expectedResult": "Expense added to the temporary expense table",
+      "status": "Pass"
+    },
+    {
+      "testId": "TC-005",
+      "feature": "Expense Planner Edit",
+      "input": {
+        "originalAmount": 500,
+        "updatedAmount": 700
+      },
+      "expectedResult": "Expense amount updated successfully",
+      "status": "Pass"
+    },
+    {
+      "testId": "TC-006",
+      "feature": "Expense Planner Delete",
+      "input": {
+        "expense": "Lunch"
+      },
+      "expectedResult": "Expense removed and total updated",
+      "status": "Pass"
+    },
+    {
+      "testId": "TC-007",
+      "feature": "Learning Search",
+      "input": {
+        "keyword": "saving"
+      },
+      "expectedResult": "Relevant learning content displayed",
+      "status": "Pass"
+    },
+    {
+      "testId": "TC-008",
+      "feature": "Learning Search",
+      "input": {
+        "keyword": "expenses"
+      },
+      "expectedResult": "Relevant expense-related content displayed",
+      "status": "Pass"
+    },
+    {
+      "testId": "TC-009",
+      "feature": "Learning Sort",
+      "input": {
+        "sort": "A-Z"
+      },
+      "expectedResult": "Lessons sorted alphabetically",
+      "status": "Pass"
+    },
+    {
+      "testId": "TC-010",
+      "feature": "Gallery Filter",
+      "input": {
+        "filter": "Budgeting"
+      },
+      "expectedResult": "Budgeting visuals displayed",
+      "status": "Pass"
+    },
+    {
+      "testId": "TC-011",
+      "feature": "Gallery Filter",
+      "input": {
+        "filter": "Saving"
+      },
+      "expectedResult": "Saving visuals displayed",
+      "status": "Pass"
+    },
+    {
+      "testId": "TC-012",
+      "feature": "Search No Match",
+      "input": {
+        "keyword": "xyz123"
+      },
+      "expectedResult": "No matching content message displayed",
+      "status": "Pass"
+    },
+    {
+      "testId": "TC-013",
+      "feature": "Feedback Form",
+      "input": {
+        "name": "Test User",
+        "email": "test@example.com",
+        "subject": "Website Feedback",
+        "rating": 5,
+        "message": "Good educational website"
+      },
+      "expectedResult": "Confirmation message displayed",
+      "status": "Pass"
+    },
+    {
+      "testId": "TC-014",
+      "feature": "Mobile Responsive Design",
+      "input": {
+        "device": "Mobile"
+      },
+      "expectedResult": "Navigation and page content remain usable without horizontal overflow",
+      "status": "Pass"
+    },
+    {
+      "testId": "TC-015",
+      "feature": "Keyboard Accessibility",
+      "input": {
+        "method": "Keyboard Tab Navigation"
+      },
+      "expectedResult": "Visible focus outline displayed on interactive controls",
+      "status": "Pass"
+    }
+  ]
+}

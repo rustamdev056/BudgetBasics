@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Practice tracking and planning sample expenses with BudgetBasics Expense Planner." name="description"/>
+<title>Expense Planner | BudgetBasics</title>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<nav class="navbar container">
+<a class="logo" href="index.html">Budget<span>Basics</span></a>
+<button aria-label="Open menu" class="menu-btn" id="menuBtn">☰</button>
+<div class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a href="learn.html">Learn</a>
+<a aria-current="page" class="active" href="planner.html">Expense Planner</a>
+<a href="goals.html">Savings Goals</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="sitemap.html">Sitemap</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="page-banner">
+<div class="container">
+<span class="eyebrow">PLAN BEFORE YOU SPEND</span>
+<h1>Your expense planner.</h1>
+<p>Practice managing a sample monthly budget.</p>
+</div>
+</section>
+<section class="section container">
+<div class="planner-intro">
+<div class="planner-intro-content">
+<span class="eyebrow">SMART SPENDING</span>
+<h2>Know where your money goes.</h2>
+<p>Add sample expenses, organize them by category and see how much of your sample budget remains.</p>
+<p class="small-note">Your planner entries are temporary and are not stored as permanent financial records.</p>
+</div>
+<div class="planner-intro-image">
+<img alt="Expense planning and money management" src="images/expense-planner.jpg"/>
+</div>
+</div>
+<div class="planner-summary">
+<div class="summary-card">
+<span>Sample Budget</span>
+<strong id="budgetDisplay">Rs. 0</strong>
+</div>
+<div class="summary-card">
+<span>Planned Expenses</span>
+<strong id="expenseTotal">Rs. 0</strong>
+</div>
+<div class="summary-card highlight-card">
+<span>Remaining Balance</span>
+<strong id="remainingBalance">Rs. 0</strong>
+</div>
+</div>
+<div class="planner-layout">
+<div class="form-card">
+<h2 id="formTitle">Add an expense</h2>
+<p>Use sample amounts to practice planning.</p>
+<label for="sampleBudget">Monthly sample budget (PKR)</label>
+<div class="inline-input">
+<input id="sampleBudget" min="0" placeholder="e.g. 20000" type="number"/>
+<button class="btn btn-outline" id="setBudgetBtn">Set</button>
+</div>
+<form id="expenseForm">
+<label for="expenseDate">Date</label>
+<input id="expenseDate" required="" type="date"/>
+<label for="expenseCategory">Category</label>
+<select id="expenseCategory" required="">
+<option value="">Choose a category</option>
+<option>Food</option>
+<option>Transport</option>
+<option>Education</option>
+<option>Entertainment</option>
+<option>Shopping</option>
+<option>Utilities</option>
+<option>Miscellaneous</option>
+</select>
+<label for="expenseDescription">Description</label>
+<input id="expenseDescription" placeholder="What are you planning to buy?" required="" type="text"/>
+<label for="expenseAmount">Amount (PKR)</label>
+<input id="expenseAmount" min="0.01" placeholder="Enter amount" required="" step="0.01" type="number"/>
+<p class="error" id="expenseError" role="alert"></p>
+<button class="btn btn-primary full-btn" id="saveExpenseBtn" type="submit">Add Expense</button>
+<button class="text-btn hidden" id="cancelEditBtn" type="button">Cancel Edit</button>
+</form>
+</div>
+<div class="table-card">
+<div class="table-heading">
+<div>
+<h2>Planned expenses</h2>
+<p>Your entries for this session.</p>
+</div>
+<select aria-label="Filter by category" id="categoryFilter">
+<option value="all">All Categories</option>
+<option>Food</option>
+<option>Transport</option>
+<option>Education</option>
+<option>Entertainment</option>
+<option>Shopping</option>
+<option>Utilities</option>
+<option>Miscellaneous</option>
+</select>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Category</th>
+<th>Description</th>
+<th>Amount</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody id="expenseTable"></tbody>
+</table>
+</div>
+<p class="empty-message" id="emptyExpenses">No expenses yet. Add your first entry!</p>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-content">
+<div>
+<a class="logo" href="index.html">Budget<span>Basics</span></a>
+<p>Helping students make smarter money decisions.</p>
+</div>
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="learn.html">Learn</a>
+<a href="planner.html">Planner</a>
+<a href="goals.html">Goals</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="sitemap.html">Sitemap</a>
+</div>
+<div class="footer-info">
+<p id="dateTime"></p>
+<p>Visits on this browser: <span id="visitorCount">0</span></p>
+</div>
+</div>
+<p class="copyright">© 2026 BudgetBasics. Educational purposes only.</p>
+</footer>
+<button aria-label="Back to top" class="back-to-top" id="backToTop">↑</button>
+<script src="js/script.js"></script>
+</body>
+</html>

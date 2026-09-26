@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Set and calculate educational savings goals with BudgetBasics." name="description"/>
+<title>Savings Goals | BudgetBasics</title>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<nav class="navbar container">
+<a class="logo" href="index.html">Budget<span>Basics</span></a>
+<button aria-label="Open menu" class="menu-btn" id="menuBtn">☰</button>
+<div class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a href="learn.html">Learn</a>
+<a href="planner.html">Expense Planner</a>
+<a aria-current="page" class="active" href="goals.html">Savings Goals</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="sitemap.html">Sitemap</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="page-banner">
+<div class="container">
+<span class="eyebrow">SAVE FOR SOMETHING</span>
+<h1>Turn a goal into a plan.</h1>
+<p>Choose something you want to save for and see how long it could take.</p>
+</div>
+</section>
+<section class="section container">
+<div class="goal-intro">
+<div class="goal-intro-content">
+<span class="eyebrow">YOUR SAVINGS GOAL</span>
+<h2>Start with a number.</h2>
+<p>Set a savings target, enter what you have already saved, and choose how much you can contribute each month.</p>
+<div class="example-box">
+<h3>Example</h3>
+<p>If your goal is Rs. 24,000, you already have Rs. 4,000, and you save Rs. 2,000 each month, you need Rs. 20,000 more and it would take about 10 months.</p>
+</div>
+</div>
+<div class="goal-intro-image">
+<img alt="Person planning a savings goal" src="images/saving-goal.jpg"/>
+</div>
+</div>
+<div class="calculator-layout">
+<div>
+<span class="eyebrow">PLAN YOUR PROGRESS</span>
+<h2>Build your savings plan.</h2>
+<p>Enter your goal details and use the calculator to estimate your remaining amount and saving time.</p>
+<div class="goal-highlights">
+<div><strong>01</strong><span>Set a target</span></div>
+<div><strong>02</strong><span>Choose a monthly amount</span></div>
+<div><strong>03</strong><span>Track your progress</span></div>
+</div>
+</div>
+<div class="calculator-card">
+<h3>Goal Calculator</h3>
+<label for="goalName">What are you saving for?</label>
+<input id="goalName" placeholder="e.g. New laptop" type="text"/>
+<label for="goalAmount">Target amount (PKR)</label>
+<input id="goalAmount" min="1" placeholder="e.g. 60000" type="number"/>
+<label for="currentSavings">Already saved (PKR)</label>
+<input id="currentSavings" min="0" placeholder="e.g. 10000" type="number"/>
+<label for="monthlyContribution">Monthly contribution (PKR)</label>
+<input id="monthlyContribution" min="1" placeholder="e.g. 5000" type="number"/>
+<button class="btn btn-primary full-btn" id="goalCalculate" type="button">Calculate My Plan</button>
+<p class="error" id="goalError" role="alert"></p>
+<div class="hidden" id="goalResult">
+<div class="result-line"><span>Goal</span><strong id="resultGoal"></strong></div>
+<div class="result-line"><span>Still needed</span><strong id="resultRemaining"></strong></div>
+<div class="result-line"><span>Estimated time</span><strong id="resultMonths"></strong></div>
+<div class="goal-progress">
+<p class="small-note">Savings progress</p>
+<div class="goal-progress-bar">
+<div class="goal-progress-fill" id="goalProgressFill"></div>
+</div>
+<p class="small-note" id="progressText"></p>
+</div>
+<div class="goal-tip">
+<strong>Saving tip:</strong>
+<p id="goalTip">Save regularly and review your progress each month.</p>
+</div>
+</div>
+<p class="small-note">This calculator provides an educational estimate for learning purposes only.</p>
+</div>
+</div>
+</section>
+<section class="section soft-section">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">SMART SAVING</span>
+<h2>Make saving easier</h2>
+<p>Small, consistent steps can help you work towards a clearly defined goal.</p>
+</div>
+<div class="card-grid">
+<div class="tip-card">
+<span>01</span>
+<h3>Set a clear target</h3>
+<p>A specific goal is easier to work towards than simply saying you want to save more.</p>
+</div>
+<div class="tip-card">
+<span>02</span>
+<h3>Save regularly</h3>
+<p>Even a smaller amount saved consistently can help you move towards a long-term goal.</p>
+</div>
+<div class="tip-card">
+<span>03</span>
+<h3>Track your progress</h3>
+<p>Check your progress regularly and adjust your plan when your circumstances change.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-content">
+<div>
+<a class="logo" href="index.html">Budget<span>Basics</span></a>
+<p>Helping students make smarter money decisions.</p>
+</div>
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="learn.html">Learn</a>
+<a href="planner.html">Planner</a>
+<a href="goals.html">Goals</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="sitemap.html">Sitemap</a>
+</div>
+<div class="footer-info">
+<p id="dateTime"></p>
+<p>Visits on this browser: <span id="visitorCount">0</span></p>
+</div>
+</div>
+<p class="copyright">© 2026 BudgetBasics. Educational purposes only.</p>
+</footer>
+<button aria-label="Back to top" class="back-to-top" id="backToTop">↑</button>
+<script src="js/script.js"></script>
+</body>
+</html>
